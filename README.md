@@ -1,49 +1,74 @@
 ## Laravel 8 Complete Blog
-
-This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
-
-•	Author: Code With Dary <br>
-•	Twitter: [@codewithdary](https://twitter.com/codewithdary) <br>
-•	Instagram: [@codewithdary](https://www.instagram.com/codewithdary/) <br>
-
-## Requirements
-•	PHP 7.3 or higher <br>
-•	Node 12.13.0 or higher <br>
+📋 Features
+📱 Responsive Design: Mobile-friendly interface using Tailwind CSS
+📝 Article Management: CRUD operations for blog posts
+🏀 Era Categories: Browse by 1980s-1990s, 2000s-2010s, 2010s-2020s
+🖼️ Image Integration: Featured images for all articles
+🔗 SEO-friendly URLs: Automatic slug generation
+📨 Contact System: User feedback submission form
+⚙️ Requirements
+PHP 7.3 or higher
+Composer
+Node.js 12.13.0 or higher
+MySQL or compatible database
 
 ## Usage <br>
 Setting up your development environment on your local machine: <br>
 ```
-git clone git@github.com:codewithdary/laravel-8-complete-blog.git
-cd laravel-8-complete-blog
-cp .env.example .env
+# Clone the repository
+git clone https://github.com/yourusername/nba-fan-blog.git
+cd nba-fan-blog
+
+# Install dependencies
 composer install
+
+# Setup environment
+cp .env.example .env
 php artisan key:generate
-php artisan cache:clear && php artisan config:clear
+
+# Create database
+mysql -u root -p
+# Then in MySQL console:
+create database nbablog;
+exit;
+
+# Configure database in .env file
+# DB_DATABASE=nbablog
+# DB_USERNAME=your_username
+# DB_PASSWORD=your_password
+
+# Run migrations and seed the database
+php artisan migrate:fresh --seed
+
+# Compile assets (if needed)
+npm install && npm run dev
+
+# Start the server
 php artisan serve
 ```
-
-## Before starting <br>
-Create a database <br>
+# Project Structure
 ```
-mysql
-create database laravelblog;
-exit;
+app/
+├── Http/Controllers/   # Request handlers
+├── Models/             # Database models (Post, User, Contact)
+database/
+├── migrations/         # Database structure
+├── seeders/            # Sample content featuring NBA stars
+public/
+├── css/                # Compiled CSS
+├── js/                 # Compiled JavaScript
+resources/
+├── views/              # Blade templates
+├── css/                # Source CSS (Tailwind)
+├── js/                 # Source JavaScript
+routes/
+├── web.php             # Application routes
 ```
-
-Setup your database credentials in the .env file <br>
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=laravelblog
-DB_USERNAME={USERNAME}
-DB_PASSWORD={PASSWORD}
-```
-
-Migrate the tables
-```
-php artisan migrate
 ```
 
-## Contributing
-Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.
+# Acknowledgements
+Original concept inspired by Code With Dary
+NBA content sourced from public domain information
+Built with Laravel 8 and Tailwind CSS
+
+
