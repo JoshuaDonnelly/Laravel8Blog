@@ -28,16 +28,36 @@
         enctype="multipart/form-data">
         @csrf
 
-        <input 
-            type="text"
-            name="title"
-            placeholder="Title..."
-            class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
+        <div class="mb-6">
+            <label for="title" class="block text-gray-700 text-sm font-bold mb-2">Title:</label>
+            <input 
+                type="text"
+                name="title"
+                id="title"
+                value="{{ old('title') }}"
+                class="bg-gray-100 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700">
+        </div>
 
-        <textarea 
-            name="description"
-            placeholder="Description..."
-            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
+        <div class="mb-6">
+            <label for="category" class="block text-gray-700 text-sm font-bold mb-2">Category:</label>
+            <select 
+                name="category"
+                id="category"
+                class="bg-gray-100 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700">
+                <option value="">Select a category</option>
+                @foreach($categories as $key => $value)
+                    <option value="{{ $key }}" {{ old('category') == $key ? 'selected' : '' }}>{{ $value }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="mb-6">
+            <label for="content" class="block text-gray-700 text-sm font-bold mb-2">Content:</label>
+            <textarea 
+                name="content"
+                id="content"
+                class="bg-gray-100 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 h-60">{{ old('content') }}</textarea>
+        </div>
 
         <div class="bg-grey-lighter pt-15">
             <label class="w-44 flex flex-col items-center px-2 py-3 bg-white-rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer">

@@ -36,22 +36,13 @@
 
             <ul class="py-4 sm:text-s pt-4 text-gray-400">
                 <li class="pb-1">
-                    <a href="/">
+                    <a href="/blog">
                         What we do
                     </a>
                 </li>
+                
                 <li class="pb-1">
-                    <a href="/">
-                        Address
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Phone
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
+                    <a href="/contact">
                         Contact
                     </a>
                 </li>
@@ -65,29 +56,29 @@
 
             <ul class="py-4 sm:text-s pt-4 text-gray-400">
                 <li class="pb-1">
-                    <a href="/">
-                        Why we love tech
+                    <a href="/blog/3">
+                        Luka Doncic Traded
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
-                        Why we love design
+                    <a href="/blog/2">
+                        Steph Curry and the Warriors
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
-                        Why to use Laravel
+                    <a href="/blog/5">
+                        Michael Jordan and the Bulls
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
-                        Why PHP is the best
+                    <a href="/blog/1">
+                        LeBron James and the Lakers
                     </a>
                 </li>
             </ul>
         </div>
     </div>
     <p class="w-25 w-4/5 pb-3 m-auto text-xs text-gray-100 pt-6">
-        Copyright 2017-2021 Code With Dary. All Rights Reserved
+        Copyright 2025 NBA Fans. All Rights Reserved
     </p>
 </footer>
